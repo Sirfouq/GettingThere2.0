@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GettingThere.MainPage">
+              
+
+    <StackLayout>
+        <Frame BackgroundColor="#373854" Padding="24" CornerRadius="0">
+            <Label Text="Welcome !" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Mobile Warehouse System" FontSize="Title" Padding="30,10,30,10"/>
+
+        <Entry x:Name="User"
+               TextColor="#a4aeba"
+               Placeholder="Username:">
+
+        </Entry>
+        <Entry x:Name="Pass"
+               TextColor="#a4aeba"
+               Placeholder="Password"
+               IsPassword="True">
+
+        </Entry>
+        <Label x:Name="Validation" FontSize="14" TextColor="red">
+
+        </Label>
+        <Button x:Name="btnLogin"
+                Text="Login"
+                CornerRadius="10"
+                HorizontalOptions="Center"
+                Clicked="OnLoginButtonClicked"/>
+              <Label HorizontalOptions="Center">
+                  <Label.FormattedText>
+                      <FormattedString>
+                          <Span Text="Haven't Registered yet?" TextColor="Gray" FontSize="16"/>
+
+                          <Span Text="Register" TextColor="Gray" FontAttributes="Bold" FontSize="16"/>
+                      </FormattedString>
+                  </Label.FormattedText>
+                  <Label.GestureRecognizers>
+                      <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                  </Label.GestureRecognizers>
+              </Label>
+        
+
+       
+                
+            
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GettingThere.RegisterPage">
+
+    <StackLayout>
+        <Grid RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+
+
+            <Entry x:Name="Username" Placeholder="Username" Grid.Row="0"/>
+            <Entry x:Name="FirstName" Placeholder="ΟΝΟΜΑ" Grid.Row="1"/>
+            <Entry x:Name="LastName" Placeholder="ΕΠΩΝΥΜΟ" Grid.Row="2"/>
+            <Entry x:Name="Company" Placeholder="ΕΤΑΙΡΕΙΑ" Grid.Row="3"/>
+            <Entry x:Name="AFM" Placeholder="ΑΦΜ" Grid.Row="4"/>
+            <Entry x:Name="Email" Placeholder="ΗΛ.ΤΑΧΥΔΡΟΜΕΙΟ" Grid.Row="5"/>
+            <Entry x:Name="Password" Placeholder="ΚΩΔΙΚΟΣ" Grid.Row="6"/>
+
+            <Button x:Name="btnRegister"
+                    Grid.Row="7"
+                    Text="Register"
+                    Clicked="btnRegister_Clicked"></Button>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

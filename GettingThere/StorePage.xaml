@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage Title="STORE" IconImageSource="outline_home_black_24.png " BackgroundColor="#373854"
+
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="GettingThere.StorePage">
+
+
+    <Grid RowSpacing="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition />
+            <RowDefinition Height="7*"/>
+
+        </Grid.RowDefinitions>
+
+
+        
+        <SearchBar x:Name="theSearchbar" PlaceholderColor="Gray" Grid.Row="0" Grid.ColumnSpan="3"
+                   Margin="0,0,0,0"
+                       
+                       Grid.Column="1"
+                       CancelButtonColor="Orange"
+                       Placeholder="ΑΝΑΖΗΤΗΣΗ"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="End"
+                       FontAttributes="Bold"
+                       TextChanged="SearchBar_TextChanged"
+                       />
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="ShowTable"  Text="Show Store" FontSize="20" TextColor="white">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+                
+           
+
+
+           
+                
+        </StackLayout>
+
+
+    <StackLayout  Grid.Row="2" Grid.ColumnSpan="2" x:Name="ListSection" IsVisible="false" HeightRequest="200" Margin="7,4,4,4" Padding="4,4,4,4" BackgroundColor="#373854"  > 
+            
+         <CollectionView x:Name="CollectionView" SelectionMode="Single" ItemsSource="{Binding prod}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding ID}"
+                               TextColor="White"
+                               FontSize="20" />
+                        <Label Text="{Binding Price}"
+                               TextColor="White"
+                               FontSize="20" />
+                        <Label Text="{Binding Description}"
+                               TextColor="White"
+                               FontSize="20"/>
+                        <Label Text="{Binding Rating} "
+                               TextColor="White"
+                               FontSize="20"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+        </Grid>
+    
+</ContentPage>

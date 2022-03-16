@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GettingThere.AddProductPage">
+    
+        
+    <StackLayout>
+       <!-- <Label x:Name="Search" Text="ΑΝΑΖΗΤΗΣΗ" FontSize="25"/> -->
+
+
+
+        <Entry x:Name="Reference" Placeholder="ΚΩΔΙΚΟΣ"/>
+        
+        <Entry x:Name="Price" Placeholder="ΤΙΜΗ"/>
+        
+        <Entry x:Name="Description" Placeholder="ΠΕΡΙΓΡΑΦΗ"/>
+
+        <Entry x:Name="Rating" Placeholder="ΒΑΘΜΟΛΟΓΙΑ"/>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnSubmit" Text="ΚΑΤΑΧΩΡΗΣΗ" Grid.Column="1"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#615F8B"
+                CornerRadius="10"
+                TextColor="White">
+                
+        </Button>
+         </Grid>
+    </StackLayout>
+        
+
+</ContentPage>

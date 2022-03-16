@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage Title="ΑΠΟΓΡΑΦΗ" IconImageSource="outline_assignment_black_24.png" BackgroundImageSource="Warehouse_background.png"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GettingThere.InventoryPage">
+<StackLayout>
+    
+    <Grid>
+        
+ <Grid.ColumnDefinitions>
+     <ColumnDefinition Width="1*"/>
+     <ColumnDefinition Width="3*"/>
+     <ColumnDefinition Width="1*"/>
+     
+ </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+
+
+        </Grid.RowDefinitions>
+ 
+    
+    <Button x:Name="btnAdd" Grid.Row="8" Grid.Column="1"
+            HorizontalOptions="Fill"
+            BackgroundColor="#615F8B"
+            HeightRequest="50"
+            TextColor="White"
+            Text="ΠΡΟΣΘΗΚΗ/ΕΝΗΜΕΡΩΣΗ"
+            CornerRadius="10">
+        
+    </Button>
+    
+    <Button x:Name="btnDelete" Grid.Row="9" Grid.Column="1"
+            HorizontalOptions="Fill"
+            BackgroundColor="#615F8B"
+            HeightRequest="50"
+            TextColor="White"
+            Text="ΔΙΑΓΡΑΦΗ"
+            CornerRadius="10">
+        
+    </Button>
+     </Grid>
+</StackLayout>
+
+
+          
+</ContentPage>

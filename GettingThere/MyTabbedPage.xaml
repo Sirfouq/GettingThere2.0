@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GettingThere.MyTabbedPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local="clr-namespace:GettingThere;assembly=GettingThere"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             SelectedTabColor="DarkMagenta"
+             BackgroundColor="White"
+             UnselectedTabColor="White"
+             BarBackgroundColor="#615F8B"
+             android:TabbedPage.IsSmoothScrollEnabled="false">
+
+             
+  <!--Pages can be added as references or inline-->
+
+
+<local:StorePage>
+
+</local:StorePage>
+
+
+
+<local:InventoryPage>
+
+</local:InventoryPage>
+               
+<local:OrdersPage>
+
+</local:OrdersPage>
+  
+   
+    
+  <ContentPage Title="ΡΥΘΜΙΣΕΙΣ" IconImageSource="outline_settings_black_24.png">
+      <ListView x:Name="UserListView"
+                  BackgroundColor="White"
+                  SelectionMode="None"
+                  Footer="">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="0,10">
+                                <Label Text="{Binding UserName}" FontSize="20"/>
+                                <Label Text="{Binding Pass}" FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+      </ContentPage>
+</TabbedPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GettingThere.DeleteProductPage"
+    BackgroundColor="#373854">
+
+    <StackLayout>
+
+        <SearchBar TextChanged="SearchBar_TextChanged"
+                   Placeholder="ΑΝΑΖΗΤΗΣΗ"
+                   TextColor="white"
+                   />
+
+       <CollectionView x:Name="DeleteProductListView" 
+                  BackgroundColor="#615F8B"
+                  SelectionMode="Multiple"
+                  ItemsSource="{Binding SelectedItems}"
+                  
+                  Footer="">
+                  <CollectionView.ItemTemplate>
+                      <DataTemplate>
+                          
+                              <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" FontSize="20" TextColor="white"/>
+                                <Label Text="{Binding Price}" FontSize="20" TextColor="white"/>
+                                <Label Text="{Binding Description}" FontSize="20" TextColor="white"/>
+                              </StackLayout>
+                      </DataTemplate>
+                      </CollectionView.ItemTemplate>
+
+
+        </CollectionView>
+
+        <Button x:Name="btnDelete"
+                Text="ΔΙΑΓΡΑΦΗ"
+                >
+           
+        </Button>
+           
+    </StackLayout>
+</ContentPage>
