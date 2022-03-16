@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.810.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingThere.Android", "GettingThere.Android\GettingThere.Android.csproj", "{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingThere", "GettingThere\GettingThere.csproj", "{F9106EDC-09CE-4A9A-A76C-381D9673D2A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GettingThere", "GettingThere\GettingThere.csproj", "{F9106EDC-09CE-4A9A-A76C-381D9673D2A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB9E2C57-A13D-4E72-8B53-64ADC12835F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F9106EDC-09CE-4A9A-A76C-381D9673D2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

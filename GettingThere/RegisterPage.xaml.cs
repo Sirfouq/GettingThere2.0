@@ -16,11 +16,6 @@ namespace GettingThere
         public async void btnRegister_Clicked(System.Object sender, System.EventArgs e)
         {
 
-
-
-            Navigation.InsertPageBefore(new MainPage(), this);
-            await Navigation.PopAsync();
-
             if (!string.IsNullOrWhiteSpace(Username.Text))
             {
                 await App.Database.SaveUserAsync(new User
@@ -33,6 +28,11 @@ namespace GettingThere
                 Username.Text = Password.Text = Email.Text = Company.Text = FirstName.Text = LastName.Text = AFM.Text = string.Empty;
                 
             }
+
+
+            Navigation.InsertPageBefore(new MainPage(), this);
+            await Navigation.PopAsync();
+
 
 
         }

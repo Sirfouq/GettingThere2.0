@@ -13,6 +13,7 @@ namespace GettingThere
     {
 
         List<User> list { get; set; }
+        IEnumerable<string> preloadedValue;
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -28,12 +29,15 @@ namespace GettingThere
         public async void onLoad()
         {
             list = new List<User>(await App.Database.GetUserAsync());
-            var preloadedValue =
+             preloadedValue =
                 list.OrderByDescending(value => value.ID).Select(value => value.UserName).Take(1);
             //                    select i.UserName).Take(1)).ToString();
-            foreach (var i in preloadedValue)
+            if (!(list == null))
             {
-                User.Text = i;
+                foreach (var i in preloadedValue)
+                {
+                    User.Text = i;
+                }
             }
         }
 
@@ -48,21 +52,6 @@ namespace GettingThere
                 Navigation.InsertPageBefore(new MyTabbedPage(), this);
                 await Navigation.PopAsync();
 
-                if (!string.IsNullOrWhiteSpace(User.Text) && !string.IsNullOrWhiteSpace(Pass.Text))
-                {
-
-                    await App.Database.SaveUserAsync(new User
-                    {
-                        UserName = User.Text,
-                        Pass = Pass.Text
-                    });
-                    User.Text = Pass.Text = string.Empty;
-
-                    
-
-
-
-                }
             }
             else
             {
@@ -74,7 +63,10 @@ namespace GettingThere
 
         async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new RegisterPage());
+
+             Navigation.InsertPageBefore(new RegisterPage(),this);
+             await Navigation.PopAsync();
+
         }         /*async void OnRegisterButton(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());
